@@ -1,15 +1,15 @@
 const canvas = document.getElementById('canvas1')
 const ctx = canvas.getContext('2d')
-canvas.width = 900
-canvas.height = 900
+canvas.width = window.innerWidth
+canvas.height = canvas.width
 
-const circRotatorio = new Circulo(300)
-const circRotatorio2 = new Circulo(1)
+const circRotatorio = new Circulo(canvas.width/3)
+const circRotatorio2 = new Circulo(canvas.width/900)
 circRotatorio2.color = 'rgb(152, 152, 152)'
-const circInicio = new CirculosRitmo(290)
-const circMedio = new CirculosRitmo(190)
-const linea = new Lineas(285, 0.7, 130)
-const linea2 = new Lineas(190, -0.2, 190)
+const circInicio = new CirculosRitmo(canvas.width/3.1)
+const circMedio = new CirculosRitmo(canvas.width/4.74)
+const linea = new Lineas(canvas.width/3.16, 0.7, 130)
+const linea2 = new Lineas(canvas.width/4.74, -0.2, 190)
 const circRitmo = new CirculoRitmo(100,192,256, 20)
 const lineaRandom = new LineasRandom()
 const lineastv = new LineasTV()

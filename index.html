@@ -36,22 +36,26 @@
         <button onclick="play()">Reproducir</button>
     </div>
     <audio id="audio" src="cancion.mp3"></audio>
+    <audio id="audio2"></audio>
     <canvas id="canvas1"></canvas>
     
     <script src="figuras.js"></script>
     <script src="audio.js"></script>
-    <script src="canvas1.js"></script>
+    <script id="canvasScript"></script>
 
     <script>
-        let audios = document.querySelectorAll('audio')
         let button = document.querySelector('button')
+        let canvasScript = document.getElementById('canvasScript')
 
-        function play(){
+        function play(){            
+            button.style.visibility = 'hidden'
+            canvasScript.src = 'canvas1.js'
+
+            let audios = document.querySelectorAll('audio')
+            console.log(audios)
             audios.forEach(audio => {
                 audio.play()
             })
-
-            button.style.visibility = 'hidden'
         }
     </script>
 </body>

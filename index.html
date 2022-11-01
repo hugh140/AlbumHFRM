@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+    <title>Creer en ti °</title>
+
+    <style>
+        canvas {
+            z-index: -1;
+        }
+        .button { 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            padding: 10px;
+            background-color: black;
+            border-radius: 2px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <button onclick="play()">Reproducir</button>
+    </div>
+    <audio id="audio" src="cancion.mp3"></audio>
+    <canvas id="canvas1"></canvas>
+    
+    <script src="figuras.js"></script>
+    <script src="audio.js"></script>
+    <script src="canvas1.js"></script>
+
+    <script>
+        let audios = document.querySelectorAll('audio')
+        let button = document.querySelector('button')
+
+        function play(){
+            audios.forEach(audio => {
+                audio.play()
+            })
+
+            button.style.visibility = 'hidden'
+        }
+    </script>
+</body>
+</html>

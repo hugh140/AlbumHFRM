@@ -1,7 +1,14 @@
 const canvas = document.getElementById('canvas1')
 const ctx = canvas.getContext('2d')
-canvas.width = window.innerWidth
-canvas.height = canvas.width
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    canvas.width = window.innerWidth
+    canvas.height = canvas.width
+}
+else{
+    canvas.width = window.innerWidth - 700
+    canvas.height = canvas.width
+}
 
 const circRotatorio = new Circulo(canvas.width/3)
 const circRotatorio2 = new Circulo(canvas.width/900)

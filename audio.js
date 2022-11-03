@@ -1,9 +1,9 @@
 class AudioTools {
     constructor (){
-        this.audio = document.getElementById('audio');
+        this.audio = document.getElementById('audio')
 
         let reproducir = document.getElementById('audio2')
-        reproducir.setAttribute('src','cancion.mp3')
+        reproducir.setAttribute('src', document.getElementById('audio').getAttribute('src'))
         document.body.appendChild(reproducir)
         this.audioContext = new AudioContext();
         this.track = this.audioContext.createMediaElementSource(this.audio)

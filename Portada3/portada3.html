@@ -33,6 +33,7 @@
       </div>
     </form>
 
+    <script src="mouseMove.js"></script>
     <script src="figures.js"></script>
     <script src="audio.js"></script>
     <script id="canvasScript"></script>
@@ -41,6 +42,8 @@
       let canvasScript = document.getElementById("canvasScript");
 
       function play() {
+        hideCursorTime()
+        
         document.querySelector("button").style.visibility = "hidden";
         document.querySelector("input").style.visibility = "hidden";
         document.getElementById("info").style.visibility = "hidden";
@@ -51,6 +54,7 @@
         audios.forEach((audio) => {
           audio.play();
         });
+
       }
 
       function cambiarMusica() {

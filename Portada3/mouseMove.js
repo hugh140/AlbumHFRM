@@ -2,7 +2,6 @@ function hideCursorTime() {
   let mousePosX = 0;
   let mousePosY = 0;
   let hideCursor = false;
-//   console.log('hola')
 
   window.addEventListener("mousemove", (e) => {
     if (mousePosX !== e.clientX && mousePosY !== e.clientY) {
